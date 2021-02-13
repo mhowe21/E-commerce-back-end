@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
     },
     include: [
       {
-        model: ProductTag,
+        model: Product,
       },
     ],
   })
