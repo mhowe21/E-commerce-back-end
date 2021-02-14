@@ -55,11 +55,11 @@ router.put("/:id", (req, res) => {
   // update a tag's name by its `id` value
   Tag.update(req.body, {
     where: {
-      id: res.params.id,
+      id: req.params.id,
     },
   })
     .then((data) => {
-      res.status(200).json(`Item ${res.params.id} updated`);
+      res.status(200).json(`Item updated`);
     })
     .catch((err) => {
       console.log(err);
